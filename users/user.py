@@ -1,11 +1,10 @@
 
-
 class User:
     def __init__(self, first_name, last_name, username, password):
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
-        self.password = password
+        self._password = password
 
     def return_first_name(self):
         return self.first_name
@@ -17,4 +16,4 @@ class User:
         return self.first_name
 
     def return_password(self):
-        return self.password
+        return self._password
