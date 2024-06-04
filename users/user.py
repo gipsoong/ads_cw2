@@ -4,7 +4,7 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
-        self._password = password
+        self.password = password
 
     def return_first_name(self):
         return self.first_name
@@ -16,4 +16,4 @@ class User:
         return self.first_name
 
     def return_password(self):
-        return self._password
+        return self.password
