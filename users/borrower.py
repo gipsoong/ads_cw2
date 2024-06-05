@@ -11,5 +11,14 @@ class Borrower(User):
     def return_account_number(self):
         return self.account_number
 
-    def borrowed_items(self):
-        return self.borrowed_items()
+    def return_borrowed_items(self):
+        if self.check_borrowed_items():
+            return self.borrowed_items()
+        else:
+            return False
+
+    def check_borrowed_items(self):
+        if 0 < len(self.borrowed_items) > 8:
+            return False
+        else:
+            return True
