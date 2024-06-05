@@ -12,6 +12,9 @@ class User:
     def return_last_name(self):
         return self.last_name
 
+    def return_name(self):
+        return self.first_name + self.last_name
+
     def return_username(self):
         return self.first_name
 
