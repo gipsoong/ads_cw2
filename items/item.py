@@ -21,5 +21,4 @@ class Item:
     def return_year_published(self):
         return self.year_published
 
-    def __str__(self):
-        return f"{self.title}, published in {self.year_published} by {self.authors}"
+

@@ -14,3 +14,6 @@ class Book(Item):
 
     def return_isbn(self):
         return self.isbn
+
+    def __str__(self):
+        return f"{self.title}, published in {self.year_published} by {self.authors}"

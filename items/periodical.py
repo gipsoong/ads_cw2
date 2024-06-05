@@ -10,3 +10,6 @@ class Periodical(Item):
         self.language = language
         self.authors = authors
         self.year_published = year_published
+
+    def __str__(self):
+        return f"{self.title}, published in {self.year_published} by {self.authors}"

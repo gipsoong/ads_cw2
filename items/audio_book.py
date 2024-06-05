@@ -19,3 +19,6 @@ class AudioBook(Item):
 
     def return_audio_format(self):
         return self.audio_format
+
+    def __str__(self):
+        return f"{self.title}, published in {self.year_published} by {self.authors}"
