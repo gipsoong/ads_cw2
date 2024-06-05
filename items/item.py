@@ -22,4 +22,4 @@ class Item:
         return self.year_published
 
     def __str__(self):
-        return True
+        return f"{self.title}, published in {self.year_published} by {self.authors}"
