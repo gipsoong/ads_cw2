@@ -12,10 +12,14 @@ class Borrower(User):
         return self.account_number
 
     def return_borrowed_items(self):
+        borrowed_string = 'BORROWED ITEMS: '
         if self.check_borrowed_items():
-            return self.borrowed_items()
+            for i in self.borrowed_items:
+                borrowed_string += f"{i.title}, "
         else:
             return False
+
+        return borrowed_string
 
     def check_borrowed_items(self):
         if 0 < len(self.borrowed_items) > 8:

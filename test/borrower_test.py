@@ -12,6 +12,7 @@ def main():
     jane_doe = Borrower('Jane', 'Doe', 'janedoe2', 'password123',
                         800, [book1, book2])
 
-    return jane_doe.borrowed_items
+    print(jane_doe.return_borrowed_items())
+
 
 main()
