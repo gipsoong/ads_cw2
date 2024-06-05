@@ -13,3 +13,9 @@ class AudioBook(Item):
         self.year_published = year_published
         self.isbn = isbn
         self.audio_format = audio_format
+
+    def return_isbn(self):
+        return self.isbn
+
+    def return_audio_format(self):
+        return self.audio_format

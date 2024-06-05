@@ -11,3 +11,6 @@ class Book(Item):
         self.authors = authors
         self.year_published = year_published
         self.isbn = isbn
+
+    def return_isbn(self):
+        return self.isbn
