@@ -1,14 +1,28 @@
-
 class Node:
-    def __init__(self, key):
+
+    def __init__(self, value):
         self.left = None
         self.right = None
-        self.val = key
+        self.value = value
 
-class Tree:
-    def __init__(self):
-        self.root = None
+    def insert(self, value):
+        if value < self.value:
+            if self.left is None:
+                self.left = Node(value)
+            else:
+                self.left.insert(value)
 
-    def add(self, value):
-        if not self.root:
-            self.root = Node(value)
+        else:
+            if self.right is None:
+                self.right = Node(value)
+            else:
+                self.right.insert(value)
+
+    def inorder_traversal(self):
+        pass
+        if self.left:
+            self.left.inorder_traversal()
+        print(self.value)
+
+        if self.right:
+            self.right.inorder_traversal()
