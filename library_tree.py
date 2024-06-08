@@ -26,3 +26,18 @@ class Node:
 
         if self.right:
             self.right.inorder_traversal()
+
+    def find(self, value):
+        if value < self.value:
+            if self.left is None:
+                return False
+            else:
+                return self.left.find(value)
+
+        elif value > self.value:
+            if self.right is None:
+                return False
+            else:
+                return self.right.find(value)
+        else:
+            return True
