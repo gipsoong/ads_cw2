@@ -9,14 +9,14 @@ class Node:
     def insert(self, key, value=None):
         if key < self.key:
             if self.left is None:
-                self.left = Node(key)
+                self.left = Node(key, value)
                 self.left.value = value
             else:
                 self.left.insert(key, value)
 
         else:
             if self.right is None:
-                self.right = Node(key)
+                self.right = Node(key, value)
                 self.right.content = value
             else:
                 self.right.insert(key, value)
