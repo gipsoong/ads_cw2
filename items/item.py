@@ -1,3 +1,6 @@
+import random
+
+
 class Item:
     def __init__(self, title, category, language, authors, year_published):
         self.title = title
@@ -5,6 +8,7 @@ class Item:
         self.language = language
         self.authors = authors
         self.year_published = year_published
+        self.id = random.randint(100000, 999999)
 
     def return_title(self):
         return self.title
@@ -20,5 +24,3 @@ class Item:
 
     def return_year_published(self):
         return self.year_published
-
-
