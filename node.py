@@ -59,4 +59,5 @@ class Node:
             else:
                 return self.right.find(key)
         else:
-            return self
+            return f"Found '{self.value}'"
+
